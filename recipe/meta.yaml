@@ -1,5 +1,5 @@
 {% set name = "mkdocs-bibtex" %}
-{% set version = "2.15.0" %}
+{% set version = "2.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mkdocs-bibtex-{{ version }}.tar.gz
-  sha256: 9aacb98e944c48e3f21b76e3d6774890ae7bcec347f48a323dbc7a7c63a7fa6d
+  sha256: cd018ff597fdadb24e58647805d465b2e8db90ab9c8978c7dbf75bd68e678013
 
 build:
   noarch: python
