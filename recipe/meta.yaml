@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mkdocs-bibtex-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mkdocs-bibtex-{{ version }}.tar.gz
   sha256: 995eb3566ccb3c7769ecb77f952b9dc79685ea24745d8c75c6921bb0d8812b0d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools-scm
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - mkdocs >=1
     - pybtex >=0.22
     - pypandoc >=1.5
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/shyamd/mkdocs-bibtex/
