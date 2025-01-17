@@ -1,5 +1,5 @@
 {% set name = "mkdocs-bibtex" %}
-{% set version = "2.18.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7cb19cfe7b24a288555f82ecb86f3ae38ce4d01141037d582e7b868217705f45
+  sha256: 51bf2f08950285bfda2fa1e4c9b08cb035938a61f52dfea8d8fa37fe997c05cf
 
 build:
   noarch: python
@@ -21,11 +21,13 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - mkdocs >=1
+    - mkdocs >=1.2
     - pybtex >=0.22
     - pypandoc >=1.5
     - requests >=2.8.1
     - validators >=0.19.0
+    - setuptools >=68.0.0
+    - responses >=0.25.6
 
 test:
   imports:
