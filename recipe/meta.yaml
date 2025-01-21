@@ -1,5 +1,5 @@
 {% set name = "mkdocs-bibtex" %}
-{% set version = "3.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 51bf2f08950285bfda2fa1e4c9b08cb035938a61f52dfea8d8fa37fe997c05cf
+  sha256: 0e6cdf3677106516dd651857b729b967ad5584fc05b97bf8850750b2038f589d
 
 build:
   noarch: python
